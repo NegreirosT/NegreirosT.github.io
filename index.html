@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Thiago Negreiros - Web Master</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/jquery.fullPage.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+
+<script type="text/javascript">
+ // TOGGLE MENU
+$(document).ready(function(){
+  $("#toggle").click(function() 
+  {
+      $(this).toggleClass("on");
+      $("#menu").toggleClass("visible");
+  });
+    
+    $("#menu ul li a").click(function() 
+    {
+      $("#toggle").toggleClass("on");
+      $("#menu").toggleClass("visible");
+    });
+
+    $('#fullpage').fullpage({
+				anchors: ['home', 'about', 'portifolio', 'skills'],
+				recordHistory: true,
+                scrollingSpeed: 1000,
+				slidesNavigation: true,
+				loopHorizontal: false,
+				afterLoad: function (anchorLink, index) {
+					//section 2 loaded
+					if (index == 2) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(0).addClass('active');
+						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(2).removeClass('active');
+					}
+					if (index == 3) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(1).addClass('active');
+						$('#menu').find('li').eq(0).removeClass('active');
+						$('#menu').find('li').eq(2).removeClass('active');
+					}
+					if (index == 4) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(2).addClass('active');
+						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(0).removeClass('active');
+					}
+				}			
+			});
+});
+</script>
+</head>
+<body>
+<div class="borders"></div>
+<div id="particles-js"></div>
+<div class="header">	
+  <a href="#home" class="logo"><img src="assets/img/logo.png" alt=""></a>
+  <div id="toggle">
+	  <div class="one"></div>
+	  <div class="two"></div>
+	  <div class="three"></div>
+  </div>
+  <div id="menu">
+	  <ul>
+	    <li><a href="#about">About me</a></li>
+	    <li><a href="#portifolio">Selected Work</a></li>
+	    <li><a href="#skills">Look my Skills</a></li>
+	  </ul>
+  </div>
+</div>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="content">
+			<div class="content-inner">
+				<div class="quote">
+					<div class="title">
+						Thiago Negreiros
+					</div>
+						Web Development front-end & back-end
+					<div class="title-sub">
+						Based in Amazonas, Brazil
+					</div>
+				</div>
+				
+			</div>
+		</div>	
+	</div>
+
+	<div class="section" id="section1">
+		<div class="content">
+			<div class="content-inner">
+				<div class="text">
+					Hello, my name is Thiago Negreiros, I'm a freelance Web Development
+					front-end & back-and. I also am Student of Science of Computation
+					of University <span>Fucapi</span> in Amazonas - Brazil.
+					I like much of programing web, I'm self-taught and constantly 
+					learning you can see at my skills below and at my jobs.
+				</div>
+				
+			</div>
+		</div>	
+	</div>
+
+	<div class="section" id="section2">
+		<div class="slide active">
+			  <div class="content work">
+				<div class="content-inner">
+					<div class="project-wrap">
+					  <div class="project" style="background: url(assets/img/portifolio1.jpg) left top; background-size: cover; ">
+						<div class="project-content">
+							<span>facebook</span>
+							<div class="title">redesign - just for fun</div>
+							<a href="https://www.behance.net/gallery/23597009/Facebook-Concept-Redesign" onclick="this.target='_blank'" class="btn-ser">view</a>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+	    </div>
+		<div class="slide">
+			  <div class="content work">
+				<div class="content-inner">
+					<div class="project-wrap">
+					  <div class="project" style="background: url(assets/img/portifolio2.jpg) left top; background-size: cover; ">
+						<div class="project-content">
+							<span>ulinq</span>
+							<div class="title">Lead Product Designer/Front End Developer</div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+	    </div>
+	    <div class="slide">
+			  <div class="content work">
+				<div class="content-inner">
+					<div class="project-wrap">
+					  <div class="project" style="background: url(assets/img/portifolio3.jpg) left top; background-size: cover; ">
+						<div class="project-content">
+							<span>ulinq</span>
+							<div class="title">Lead Product Designer/Front End Developer</div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+	    </div>
+	    <div class="slide">
+			  <div class="content work">
+				<div class="content-inner">
+					<div class="project-wrap">
+					  <div class="project" style="background: url(assets/img/portifolio4.jpg) left top; background-size: cover; ">
+						<div class="project-content">
+							<span>ulinq</span>
+							<div class="title">Lead Product Designer/Front End Developer</div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+	    </div>
+	</div>
+
+	<div class="section" id="section3">
+		<div class="content">
+			<div class="content-inner">
+				<div id="codeconSkills">
+	                <div class="codeconSkillbar">
+	                    <div id="codeconHTML"> 
+	                      <span class="codeconSkillArea ">HTML</span>
+	                      <span class="PercentText ">90%</span>
+	                    </div>
+	                </div>
+		             <div class="codeconSkillbar">
+	                    <div id="codeconCSS">
+	                      <span class="codeconSkillArea ">CSS/CSS3</span>
+	                      <span class="PercentText ">70%</span>
+	                    </div>
+	                  </div>
+
+                  
+                  	<div class="codeconSkillbar">
+	                    <div id="codeconJS">
+	                      <span class="codeconSkillArea ">Javascript</span>
+	                      <span class="PercentText ">65%</span>
+	                    </div>
+                 	</div>
+	                  
+	                 <div class="codeconSkillbar">
+                    	<div id="codeconjQuery">
+	                      <span class="codeconSkillArea ">jQuery</span>
+	                      <span class="PercentText ">50%</span>
+                    	</div>
+                 	 </div>
+
+                  <div class="codeconSkillbar">
+                    <div id="codeconPHP">
+                      <span class="codeconSkillArea ">PHP </span>
+                      <span class="PercentText ">50%</span>
+                    </div>
+                  </div> 
+
+                  <div class="codeconSkillbar">
+                    <div id="codeconLaravel">
+                      <span class="codeconSkillArea ">Laravel</span>
+                      <span class="PercentText ">50%</span>
+                    </div>
+                  </div>    
+	          	  <div class="codeconSkillbar">
+                    <div id="codeconSQL">
+                      <span class="codeconSkillArea ">Database </span>
+                      <span class="PercentText ">80%</span>
+                    </div>
+                  </div>
+	            </div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+
+</body>
+</html>
