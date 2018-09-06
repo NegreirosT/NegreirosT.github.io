@@ -30,7 +30,7 @@ $(document).ready(function(){
     });
 
     $('#fullpage').fullpage({
-				anchors: ['home', 'about', 'portifolio', 'skills'],
+				anchors: ['home', 'about', 'portifolio', 'skills', 'social'],
 				recordHistory: true,
                 scrollingSpeed: 1000,
 				slidesNavigation: true,
@@ -42,17 +42,27 @@ $(document).ready(function(){
 						$('#menu').find('li').eq(0).addClass('active');
 						$('#menu').find('li').eq(1).removeClass('active');
 						$('#menu').find('li').eq(2).removeClass('active');
+						$('#menu').find('li').eq(3).removeClass('active');
 					}
 					if (index == 3) {
 						//adding active class to the 1st element in the slide menu
 						$('#menu').find('li').eq(1).addClass('active');
 						$('#menu').find('li').eq(0).removeClass('active');
 						$('#menu').find('li').eq(2).removeClass('active');
+						$('#menu').find('li').eq(3).removeClass('active');
 					}
 					if (index == 4) {
 						//adding active class to the 1st element in the slide menu
 						$('#menu').find('li').eq(2).addClass('active');
 						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(0).removeClass('active');
+						$('#menu').find('li').eq(3).removeClass('active');
+					}
+					if (index == 5) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(3).addClass('active');
+						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(2).removeClass('active');
 						$('#menu').find('li').eq(0).removeClass('active');
 					}
 				}			
@@ -75,6 +85,7 @@ $(document).ready(function(){
 	    <li><a href="#about">About me</a></li>
 	    <li><a href="#portifolio">Selected Work</a></li>
 	    <li><a href="#skills">Look my Skills</a></li>
+	    <li><a href="#social">Social Pages</a></li>
 	  </ul>
   </div>
 </div>
@@ -86,7 +97,7 @@ $(document).ready(function(){
 					<div class="title">
 						Thiago Negreiros
 					</div>
-						Web Development front-end & back-end
+						Web Master Development 
 					<div class="title-sub">
 						Based in Amazonas, Brazil
 					</div>
@@ -120,7 +131,7 @@ $(document).ready(function(){
 						<div class="project-content">
 							<span>facebook</span>
 							<div class="title">redesign - just for fun</div>
-							<a href="https://www.behance.net/gallery/23597009/Facebook-Concept-Redesign" onclick="this.target='_blank'" class="btn-ser">view</a>
+							<a href="https://www.behance.net/gallery/23597009/Facebook-Concept-Redesign" onclick="this.target='_blank'" class="btn-n">view</a>
 						</div>
 					  </div>
 					</div>
@@ -226,6 +237,23 @@ $(document).ready(function(){
 			</div>
 		</div>	
 	</div>
+
+	<div class="section" id="section4">
+		<div class="content">
+		  <div class="content-inner">
+		  		<div class="title">
+					Follow me
+				</div>
+				<div class="social">
+				  <div><a href="#" onclick="this.target='_blank'"><i class="fa fa-behance-square fa-4x" aria-hidden="true"></i></a></div>
+				  <div><a href="https://www.linkedin.com/in/thiago-negreiros-61a591a0?trk=hp-identity-name" onclick="this.target='_blank'"><i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></div>
+				  <div><a href="mailto:negreiros.t@gmail.com"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></a></div>
+				  <div><a href="https://github.com/NegreirosT"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></div>
+				</div>
+		  </div>
+		</div>
+	</div>
+
 </div>
 <script src="assets/js/particles.min.js"></script>
 <script src="assets/js/app.js"></script>
