@@ -410,12 +410,12 @@ to {
 .codeconSkillArea {
     z-index: 1;
     float: left;
-    //position: absolute;
+    position: absolute;
     margin-top: 15px;
     margin-left: 15px;
     text-shadow: none;
     color: #fff;
-    //font-family: Lato-Regular, sans-serif;
+    font-family: Lato-Regular, sans-serif;
     font-size: 18px;
 }
 .PercentText {
@@ -426,6 +426,6 @@ to {
     float: right;
     text-shadow: none;
     color: #fff;
-    //font-family: Lato-Regular, sans-serif;
+    font-family: Lato-Regular, sans-serif;
     font-size: 18px;
 }
